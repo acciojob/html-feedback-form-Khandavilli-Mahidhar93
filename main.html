@@ -7,13 +7,17 @@
 </head>
 
 <body>
-	<form method="post">
-		<h1>Feedback Form</h1>
-		<input type="text" id="name" placeholder="Enter Name" minlength="3" maxlength="50"><br/>
-		<input type="url" id="portfolio" placeholder="Enter URL"><br/>
-	
-		<input type="color" id="favColor"><br/>
-		<input type="range" min="1" max="100">
+	<form method="post" action="/submit_feedback">
+		<h2>Feedback Form</h2>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required minlength="3" maxlength="50"><br><br>
+		<label for="portfolio">Portfolio URL:</label>
+		<input type="url" id="portfolio" name="portfolio" required><br><br>
+		<label for="favColor">Favorite Color:</label>
+		<input type="color" id="favColor" name="favColor"><br><br>
+		<label for="likeness">Likeness (1-100):</label>
+		<input type="range" id="likeness" name="likeness" min="1" max="100" required><br><br>
+		<input type="submit" value="Submit Feedback">
 	</form>
 	<!-- the entire body must be written by student -->
 	
